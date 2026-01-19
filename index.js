@@ -39,8 +39,8 @@ function runClock(){
   min=min<10?'0'+min:min;
   sec=sec<10?'0'+sec:sec;
 
-  hrs=hrs.toString(); //04
-  min=min.toString();
+  hrs=hrs.toString(); //"04:30:56"
+  min=min.toString();    
   sec=sec.toString();
 
 h[0].innerHTML=hrs[0];//0
