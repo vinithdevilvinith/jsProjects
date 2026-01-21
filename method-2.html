@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method-2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h3>XMLHttpRequest in JavaScript</h3>
+    <button id="btn">Get Data</button>
+    <script>
+      const btn = document.getElementById("btn");
+      function loadFile() {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://nonexistentdomain.example.com/file.txt", true);
+        console.log("Ready State : ", xhr.readyState);
+        xhr.onload = function () {
+          console.log("Ready State : ", xhr.readyState);
+          if (xhr.status === 200) {
+            document.write(xhr.responseText);
+          } else {
+            console.error(`Error : ${xhr.status} - ${xhr.statusText}`);
+          }
+        };
+
+        xhr.onprogress = function () {
+          console.log("onprogress Ready State", xhr.readyState);
+        };
+
+        xhr.onerror = function () {
+          console.error("Request Error: Network issue or invalid URL.");
+        };
+
+        xhr.send();
+      }
+      btn.addEventListener("click", loadFile);
+    </script>
+  </body>
+</html>

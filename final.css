@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 20px;
+
+}
+
+h3{
+    font-weight: 600;
+    margin: 15px 0;
+    color: tomato;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form{
+    width: 600px;
+}
+
+form .form-group{
+    display: flex;
+    align-items: center;
+
+}
+
+form .form-group label{
+    font-weight: 500;
+    text-transform: uppercase;
+    min-width: 100px;
+    
+}
+
+form .form-group input{
+    font-size: 16px;
+    padding: 5px 16px;
+    border: none;
+    outline: none;
+    background-color: #ccc;
+    border-radius: 2px;
+    margin: 10px 5px;
+}
+
+form button{
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    background-color: tomato;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 15px 0;
+
+}
+
+table{
+    border: 2px solid teal;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+table thead tr{
+    background-color: teal;
+    border-color: teal;
+    color: white;
+}
+
+table thead tr th{
+    border-color: teal;
+    font-weight: 400;
+}
+
+table td, table th{
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+table td button {
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 8px;
+    display: block;
+    margin:0 auto;
+    background-color: teal;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: red;
+}
+
+.btn-edit ion-icon,.btn-delete ion-icon{
+    pointer-events: none;
+}
+
+

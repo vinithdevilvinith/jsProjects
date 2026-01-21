@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Exploring Quantum Computing",
+      "body": "A deep dive into the potential of quantum computers."
+    },
+    {
+      "id": "2",
+      "title": "The Rise of Remote Work",
+      "body": "How remote work is changing the professional landscape."
+    },
+    {
+      "id": "3",
+      "title": "Advancements in Renewable Energy",
+      "body": "Recent innovations in solar and wind technology."
+    },
+    {
+      "id": "4",
+      "title": "Tech Trends to Watch",
+      "body": "What technologies are expected to make waves this year."
+    },
+    {
+      "id": "5",
+      "title": "Understanding Blockchain",
+      "body": "A beginner’s guide to how blockchain technology works."
+    }
+  ]
+}

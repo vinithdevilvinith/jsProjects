@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>method-4</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h3>XMLHttpRequest in JavaScript Read JSON File using Promise</h3>
+    <button id="btn">Get Data</button>
+    <div id="output"></div>
+    <script>
+      const btn = document.getElementById("btn");
+      const output = document.getElementById("output");
+
+      function loadFileWithPromise(url) {
+        return new Promise((resolve, reject) => {
+          const xhr = new XMLHttpRequest();
+          xhr.open("GET", url, true);
+          xhr.responseType = "json";
+          xhr.onload = function () {
+            if (xhr.status === 200) {
+              resolve(xhr.response);
+            } else {
+              reject(new Error(`HTTP Error: ${xhr.status} - ${xhr.statusText}`));
+            }
+          };
+
+          xhr.onerror = function () {
+            reject(new Error("Request Error: Network issue or invalid URL."));
+          };
+          xhr.send();
+        });
+      }
+      btn.addEventListener("click", () => {
+        const url = "https://jsonplaceholder.typicode.com/posts";
+        loadFileWithPromise(url)
+          .then((data) => {
+            //console.log(data);
+            data.forEach((post) => {
+              output.innerHTML += `
+                <div>
+                      <h4>${post.title}</h4>
+                      <p>${post.body}</p>
+                  </div>`;
+            });
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      });
+    </script>
+  </body>
+</html>
